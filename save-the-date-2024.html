@@ -1,0 +1,691 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Save-the-Date: NASA Earth Sciences &amp; UW Hackweek </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="30b05fb1-b78f-4494-a48e-c0eb36556608" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">📥</span></div><h1 class="page-title"><mark class="highlight-purple"><strong>Save-the-Date: NASA Earth Sciences &amp; UW Hackweek </strong></mark></h1><p class="page-description"></p></header><div class="page-body"><p id="e974183d-b24d-480c-b344-9fd72835c287" class="">
+</p><figure id="7803f688-b998-4eb5-b575-f73c642b18f7" class="image"><a href="https://images.unsplash.com/photo-1622839497468-9e4a20007cf8?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img style="width:6240px" src="https://images.unsplash.com/photo-1622839497468-9e4a20007cf8?ixlib=rb-4.0.3&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a></figure><p id="c0e5b4ce-548e-4b43-bba5-71423aaaa39c" class="">
+</p><div id="86d7f150-3e6e-4562-bcbc-438acc2eac00" class="column-list"><div id="07eaba81-6c62-41f9-beac-2ff7665c25d7" style="width:49.99999999999999%" class="column"><h1 id="c9d7e9ba-10eb-4699-98c4-c326b719a385" class=""><mark class="highlight-purple">NASA Earth Sciences &amp; UW Hackweek</mark></h1><h2 id="1d8b4589-d8ec-4f9c-a231-192f48fcebc7" class=""><strong>University of Washington</strong></h2><h2 id="c820d586-bf8c-4ead-86bf-49d5eb65ddb5" class=""><strong>August 19-23, 2024</strong></h2><h2 id="b9bc58ff-0b41-4f8c-a3c2-1b63c6ad4864" class=""><strong>Seattle WA</strong></h2><p id="299e8f53-98e0-480f-bd6c-309fc25911cc" class="">
+</p></div><div id="dd427d22-f645-4a61-991d-e214ded159ab" style="width:49.99999999999999%" class="column"><figure id="d962f98a-9e7b-4f70-84ae-ffb0b4963106" class="image" style="text-align:center"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/Untitled.png"><img style="width:144px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/Untitled.png"/></a></figure><figure id="decb2ee9-d5b8-44b4-9d8b-9fb50589ee54" class="image" style="text-align:center"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/ICESat2_resize.png"><img style="width:240px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/ICESat2_resize.png"/></a></figure><figure id="eb46f412-2ab0-4e7c-a099-40a818954570" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/GEOsmart-logo_opt_A_6.png"><img style="width:600px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/GEOsmart-logo_opt_A_6.png"/></a></figure><figure id="d1b45b63-ff79-4478-8242-d8c415679396" class="image" style="text-align:center"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/snowex-logo.png"><img style="width:192px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/snowex-logo.png"/></a></figure><p id="dedea008-175b-4b09-8835-55f1777aa903" class="">
+</p></div></div><p id="98cfa696-c18e-4a6e-afc9-8751d5c6ce7f" class="">The <mark class="highlight-purple"><strong>eScience Institute at the University of Washington</strong></mark> is excited to present the next evolution in our annual hackweek program. 2024 will be our first combined event, with projects and tutorials focused on the NASA ICESat-2 and SnowEx missions.</p><p id="c42c07f5-c9a5-4649-b64e-8fa2579d1c63" class="">UW Hackweeks have always been about collaboration, learning, and fun. The new combined event structure will allow for even greater levels of skill sharing between domains, while retaining the specific project focus that has made the event so valuable to participants over the years.</p><p id="57e1cb7b-7951-4f07-a94f-82b123e685e3" class="">Read on for more details about the event, who it’s for, or click the link below to apply. </p><p id="b62b9d9a-d8c5-490b-b449-439137fe4cfb" class="">We hope to see you in Seattle WA in August! </p><p id="8f4f1f55-4b3f-4fd4-b81c-11f0ef93edcf" class="">
+</p><div id="b3895918-87e5-4a9a-b4b9-a0d669142653" class="column-list"><div id="b81124cc-8641-4cce-bab7-8dd0e5456827" style="width:49.99999999999999%" class="column"><figure id="b5f6671b-36a6-4463-8e59-f68fe71c8c64" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/finger.png"><img style="width:1800px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/finger.png"/></a></figure></div><div id="2251da95-eb74-4570-aed8-49748bb77d09" style="width:49.99999999999999%" class="column"><h2 id="b1288965-83c3-4a89-afc3-b1f3a31f4f3e" class=""><a href="https://forms.fillout.com/t/fvDozLe31gus">Please notify me when applications open</a></h2><p id="56798aab-3e63-45b2-8b9b-75da891a4679" class="">Participant applications open from <strong>April 2 - 30, 2024</strong>. Submit your interest at the link above to be notified once the form is open.</p><p id="fa289a95-63e0-4d1e-b21a-3bff8409c692" class="">
+</p></div></div><h1 id="822e537c-6326-46c8-80ca-4f696912d168" class="">What is a hackweek?</h1><p id="64ded63b-23f1-4ea2-b675-7a97ab368794" class="">A hackweek is a participant-driven workshop that blends data science education, community building, and project work over a short period of time. The events are highly immersive and allow participants to work directly with data science professionals to co-shape projects and educational outcomes. Hackweeks often help individuals and teams engage more effectively in open and reproducible science (<a href="https://www.pnas.org/doi/abs/10.1073/pnas.1717196115">Huppenkothen </a><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1717196115"><em>et al.</em></a><a href="https://www.pnas.org/doi/abs/10.1073/pnas.1717196115">, 2018</a>).</p><h1 id="24eb28b4-9cd9-4f09-b18a-e1c1dbb27de5" class="">Who attends hackweeks?</h1><div id="a8b4b535-0517-420d-b17f-4d6b56ecf57c" class="column-list"><div id="c5108a30-d320-48be-8d6f-0d28b06a39c2" style="width:50%" class="column"><figure id="d88ac64d-b230-4679-961c-d4bcec8bfb7d" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3489.jpg"><img style="width:4416px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3489.jpg"/></a></figure></div><div id="f527f2ca-710c-448f-9aa6-65fda741e663" style="width:50%" class="column"><figure id="ed82c75e-1a76-4794-ae1d-7edaa9f8720a" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3331.jpg"><img style="width:6240px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3331.jpg"/></a></figure></div></div><p id="bd8b4452-ec17-4e53-be38-bef9cc03fc7a" class="">Hackweeks are designed to support academic students and researchers at the graduate level and higher, as well as data scientists, engineers, technicians and industry partners. </p><h1 id="c3c42f0c-ae7a-4366-b7ea-e919ccf7ee80" class="">What is the learning environment like?</h1><div id="e4616f8e-ab81-4177-8348-be7ac17237f6" class="column-list"><div id="1760e1bb-6b53-4cf8-ac2e-fc6e3ed966d4" style="width:50%" class="column"><figure id="4d90591a-07af-4e0a-8b38-223041073fd6" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3454.jpg"><img style="width:6240px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3454.jpg"/></a></figure></div><div id="56d189b5-6804-4861-90a8-3888b2132b6f" style="width:50%" class="column"><figure id="d4f46fa1-050a-4e70-b6d2-3e010346a3fe" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3460.jpg"><img style="width:6240px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/DSCF3460.jpg"/></a></figure></div></div><p id="553825de-4e87-40c0-b134-a4cd3d4aa219" class="">eScience Staff partner with community members to foster positive and supportive learning spaces. We meet people where they are and help participants set realistic learning goals during the event. By emphasizing peer learning and providing support from helpers and project leaders, we aim to create a welcoming environment that supports learning.</p><h1 id="ea030c43-ba33-4373-9840-635ad6479198" class="">What tools do we use?</h1><figure id="dcadd7a6-126d-4706-865d-1419c6c04b5a" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/hackweek_logos.png"><img style="width:1622px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/hackweek_logos.png"/></a></figure><p id="3444e766-3497-48ef-82cf-7427da705e2b" class="">We provide hackweek participants with access to a centralized computing platform (typically <a href="https://jupyter.org/hub">JupyterHub</a>) for tutorial and project work. We use Git and GitHub to teach about version control and to share scripts. We use the Python programming language in all of our hackweek training and projects.</p><h1 id="82af22f9-dfb4-406b-acbe-a57f6eecf558" class="">What will I learn about earth science data?</h1><p id="86af200f-dbf3-432a-b0ba-6daf51def313" class="">The hackweek tutorials and projects will be designed by members of the ICESat-2, SnowEx and GeoSMART communities. Participants will choose from learning material from tutorials and projects in one of these three tracks:</p><div id="6e21857c-9d4b-449a-9d61-123b1218cce8" class="column-list"><div id="610c9c26-baff-48ed-bdc6-5615f11045a8" style="width:33.33333333333333%" class="column"><h3 id="7cd06bb0-20c1-419e-b78e-d56f32c0ff9c" class=""><a href="https://icesat-2.hackweek.io/">ICESat-2 Track</a></h3><p id="6bc8727b-216e-4254-a416-ffdf7d743a1a" class="">Focus on cloud computing workflows and collaborative development of software for access and analysis of ICESat-2 datasets.</p></div><div id="f1478979-76d2-4a05-9a05-622c64159f04" style="width:33.33333333333333%" class="column"><h3 id="9e922169-51ed-4c2c-83ca-fac5713ce50e" class=""><a href="https://snowex.hackweek.io/">SnowEx Track</a></h3><p id="387ec16a-d5b5-4c44-af16-c0ec181e084f" class="">Focus on analysis of 2023 SnowEx field campaign data and creation of shared data access tools.</p></div><div id="afb94ad0-f8c6-4303-89a1-d46f91603443" style="width:33.33333333333333%" class="column"><h3 id="c7337d47-9cb4-4f9c-9dac-1047f23a6e86" class="">GeoSMART Track</h3><p id="7388629f-e41b-4c2b-a111-bbbb239cd3a9" class="">Building Machine Learning workflows using data from SnowEx and ICESat-2 missions.</p><p id="131f5c0f-ef42-40fd-bb83-edb7f4dd5c41" class="">
+</p></div></div><h1 id="68c3d5ee-edfc-4d9a-a9a3-1e4dd7eeceee" class="">Are there prerequisites for attending?</h1><p id="cf8b35e7-2048-41dd-96c0-9a34412c63a9" class="">Yes, all tutorials and project work will assume participants are familiar with Python-based computing in the geosciences as described on the <a href="https://foundations.projectpythia.org/landing-page.html">Pythia Foundations</a> website. We will also ask participants to complete <a href="https://book-template.hackweek.io/preliminary/checklist_index.html">preliminary work</a> before the hackweek to set up their learning environments in GitHub and JupyterHub. We can provide resources to participants wishing to brush up on their skills before an event, however we will not be teaching these core concepts during the hackweek. </p><h1 id="e7de349b-cabf-49f9-878c-e33656ca9f05" class=""><strong>Questions?</strong></h1><p id="66cab55a-bde7-4468-8833-7717fcaf81eb" class=""><a href="mailto:escience-hackweeks@uw.edu">Mark Welden-Smith</a> - Program Manager or visit the <a href="https://escience.washington.edu/using-data-science/hackweeks/">eScience Institute website</a> for more details on outcomes from past hackweeks.</p><p id="09ef8c0d-43df-4dd6-b016-5c3f2a63872e" class="">
+</p><p id="466a571d-6c47-4d47-8633-2094c654a25a" class="">
+</p><p id="c49ca137-e821-4d34-9368-083aab96c540" class=""><div class="indented"><div id="647884d5-c856-484a-8b2e-39fb8e585ce8" class="column-list"><div id="19477e7f-7d8d-4804-89c9-422e890815dc" style="width:18.75%" class="column"><figure id="8ba69a8f-79d3-4f7e-8499-9820bb02e0f6" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/Testimontial_copy.png"><img style="width:697px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/Testimontial_copy.png"/></a></figure></div><div id="eb688c7c-6d8b-4883-8073-8124f17b0120" style="width:81.25%" class="column"><p id="2f7420b8-6abc-450c-af79-c686da54bbfb" class=""><em><mark class="highlight-purple"><strong>“The hackweek was an excellent experience for me! I met a lot of people who were supportive and helpful, and gained hands-on experience beneficial to my research. I would attend again and encourage everybody to apply!”</strong></mark></em></p><p id="c6544265-68ee-4786-b23a-3358026deaca" class="">
+</p><hr id="799bba90-866f-4eef-bcab-7504b6bd8e99"/><h3 id="4ff07611-a671-4469-82fa-918abc044319" class="">Mahboubeh Boueshagh</h3><p id="7658b8ea-8631-41b1-bb9d-1eb8dd45dc07" class="">2022 SnowEx Hackweek Participant</p><p id="ed5cd694-daf7-4a09-9825-a950414e895b" class="">
+</p></div></div></div></p><p id="e9f3f1ff-9d00-4358-a1d9-ed605d1a86b1" class="">
+</p><figure id="821de51a-5564-4678-a876-3f4d8e7e8c38" class="image"><a href="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/eScience_Logo_HR.png"><img style="width:2323px" src="Save-the-Date%20NASA%20Earth%20Sciences%20&amp;%20UW%20Hackweek%2030b05fb1b78f4494a48ec0eb36556608/eScience_Logo_HR.png"/></a></figure><div id="a914a192-26d5-4c7a-b970-b44d04a6e495" class="column-list"><div id="6d76be09-8f6b-46bd-9be7-08381c11429a" style="width:33.33333333333333%" class="column"><p id="3468ecea-8b15-4a03-a7a5-696d79349975" class="">
+</p></div><div id="6d17ea0d-1324-4679-af3c-666656f30642" style="width:33.33333333333333%" class="column"><p id="8bc65185-8d33-497d-b22f-a293374c77f6" class="">
+</p></div><div id="bd02eaf6-9808-4e92-b543-ac43688df1a1" style="width:33.33333333333333%" class="column"><p id="9ce4f744-e77e-4791-b531-1540a7b0ff9d" class="">
+</p></div></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
